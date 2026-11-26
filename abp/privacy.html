@@ -4,56 +4,255 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AlbumByPeople 개인정보처리방침</title>
+<meta name="description" content="AlbumByPeople(ABP) 앱 개인정보처리방침 / Privacy Policy">
 <style>
-  :root { --bg: #fafaf7; --ink: #1f2328; --muted: #5d636b; --line: #e3e3dc; --accent: #2f6f5e; }
-  @media (prefers-color-scheme: dark) { :root { --bg: #16181b; --ink: #e8e8e3; --muted: #a3a8ae; --line: #2b2f34; --accent: #6cc3a9; } }
+  :root {
+    --bg: #f6f5ec; --card: #ffffff; --ink: #24291f; --muted: #5d6556;
+    --accent: #3f6b3a; --line: #dfe2d2; --chip: #eef2e4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1c2119; --card: #252b22; --ink: #e9ecdf; --muted: #a8b09c;
+      --accent: #9cc58f; --line: #39412f; --chip: #2e3628;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1c2119; --card: #252b22; --ink: #e9ecdf; --muted: #a8b09c;
+    --accent: #9cc58f; --line: #39412f; --chip: #2e3628;
+  }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif; line-height: 1.75; }
-  main { max-width: 720px; margin: 0 auto; padding: 48px 20px 72px; }
-  h1 { font-size: 26px; margin: 0 0 4px; }
-  .sub { color: var(--muted); margin: 0 0 28px; font-size: 14px; }
-  h2 { font-size: 17px; margin: 28px 0 8px; color: var(--accent); }
-  p, li { margin: 0 0 8px; }
-  ul { padding-left: 20px; margin: 0 0 8px; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Roboto, sans-serif;
+    line-height: 1.7; font-size: 16px; word-break: keep-all; overflow-wrap: anywhere;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { margin-bottom: 24px; }
+  .logo { font-weight: 800; font-size: 14px; letter-spacing: .12em; color: var(--accent); }
+  h1 { font-size: 26px; line-height: 1.35; margin: 6px 0 8px; }
+  .meta { color: var(--muted); font-size: 14px; }
+  nav.lang { display: flex; gap: 8px; margin-top: 14px; }
+  nav.lang a {
+    text-decoration: none; color: var(--ink); background: var(--chip);
+    border: 1px solid var(--line); border-radius: 999px; padding: 4px 14px; font-size: 14px;
+  }
+  .summary {
+    background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent);
+    border-radius: 10px; padding: 16px 18px; margin: 20px 0 28px;
+  }
+  .summary p { margin: 0; }
+  section { margin-bottom: 26px; }
+  h2 { font-size: 19px; margin: 0 0 8px; padding-top: 6px; }
+  h2 .n { color: var(--accent); margin-right: 6px; }
+  ul { padding-left: 20px; margin: 6px 0; }
+  li { margin: 3px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; background: var(--card); }
+  th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: var(--chip); font-weight: 600; }
+  .tbl { overflow-x: auto; }
   a { color: var(--accent); }
-  footer { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0 36px; }
+  footer { color: var(--muted); font-size: 14px; margin-top: 40px; }
 </style>
 </head>
 <body>
 <main>
-  <h1>AlbumByPeople(A.B.P) 개인정보처리방침</h1>
-  <p class="sub">시행일: 앱 출시일 · 운영자: DGR1987(디지알1987)</p>
 
-  <p>DGR1987(이하 "회사")은 AlbumByPeople(A.B.P, 이하 "앱") 이용자의 개인정보를 중요하게 생각하며, 관련 법령을 지킵니다. 이 방침은 앱이 어떤 정보를 어떻게 다루는지 설명합니다.</p>
+<!-- ============================ 한국어 ============================ -->
+<article id="ko" lang="ko">
+<header>
+  <div class="logo">ABP</div>
+  <h1>AlbumByPeople 개인정보처리방침</h1>
+  <div class="meta">시행일: 2026년 12월 1일 · 운영자: DGR1987(디지알1987)</div>
+  <nav class="lang"><a href="#ko">한국어</a><a href="#en">English</a></nav>
+</header>
 
-  <h2>1. 사진은 기기 밖으로 나가지 않습니다</h2>
-  <p>앱의 사진 정리·중복 사진 찾기·인물별 묶기 기능은 모두 이용자의 기기 안에서 처리됩니다. 회사는 이용자의 사진, 얼굴 정보, 앨범 내용을 서버로 전송하거나 저장하지 않습니다.</p>
+<div class="summary">
+  <p><strong>요약</strong> — AlbumByPeople(이하 “앱”)은 사진과 얼굴 분석을 <strong>모두 휴대폰 안에서만</strong> 처리합니다.
+  사진, 동영상, 얼굴 정보, 사진의 위치 정보를 운영자의 서버나 다른 곳으로 보내지 않으며, 운영자는 이를 받거나 볼 수 없습니다.
+  회원가입·로그인이 없고, 인터넷은 광고(Google AdMob)와 결제(Google Play), 그리고 이용자가 직접 켠 경우의 ‘정밀 주소’ 기능에만 사용합니다.</p>
+</div>
 
-  <h2>2. 앱이 요청하는 권한</h2>
+<section>
+  <h2><span class="n">1.</span>운영자가 수집하는 개인정보</h2>
+  <p>운영자는 이용자의 개인정보를 직접 수집하거나 서버에 저장하지 않습니다. 앱에는 운영자가 운영하는 서버가 없습니다.</p>
+</section>
+
+<section>
+  <h2><span class="n">2.</span>휴대폰 안에서만 처리하는 정보</h2>
+  <p>앱의 기능을 위해 다음 정보를 이용자의 휴대폰 안에서만 처리·저장합니다. 이 정보는 휴대폰 밖으로 전송되지 않습니다.</p>
+  <div class="tbl"><table>
+    <tr><th>정보</th><th>사용 목적</th></tr>
+    <tr><td>사진·동영상</td><td>얼굴을 찾아 인물별로 묶고, 앨범·타임라인을 만들기 위해 읽습니다.</td></tr>
+    <tr><td>얼굴 영역과 얼굴 특징값</td><td>같은 사람의 얼굴끼리 묶기 위해 휴대폰 안의 분석 모델로 만든 숫자 값입니다. 앱 안에만 저장됩니다.</td></tr>
+    <tr><td>사진의 촬영 시각·위치(사진 파일에 기록된 정보)</td><td>타임라인에서 날짜와 장소를 보여 주기 위해 사용합니다.</td></tr>
+    <tr><td>이용자가 붙인 인물 이름, 앱 설정, 도토리 개수</td><td>앱 이용을 위해 저장합니다.</td></tr>
+  </table></div>
+  <p>이 정보는 앱을 삭제하거나 휴대폰 설정에서 앱 데이터를 지우면 함께 삭제됩니다.</p>
+</section>
+
+<section>
+  <h2><span class="n">3.</span>이용자가 직접 공유하는 경우</h2>
+  <p>이용자가 [공유] 기능으로 타임라인을 보내면, 고른 사진이 들어간 파일이 만들어져 이용자가 선택한 앱(예: 카카오톡)으로 전달됩니다.
+  이는 이용자가 직접 선택한 전송이며, 운영자는 그 내용을 받거나 볼 수 없습니다.</p>
+</section>
+
+<section>
+  <h2><span class="n">4.</span>외부 서비스(제3자)가 처리하는 정보</h2>
+  <p>앱은 다음 Google 서비스를 사용합니다. 이 서비스들은 각자의 개인정보처리방침에 따라 정보를 처리합니다.</p>
+  <div class="tbl"><table>
+    <tr><th>서비스</th><th>목적</th><th>처리될 수 있는 정보</th></tr>
+    <tr><td>Google AdMob</td><td>보상형 광고 표시(이용자가 직접 광고 보기를 누른 경우)</td>
+        <td>광고 ID 등 기기 식별자, IP 주소로 추정한 대략적 위치, 광고 상호작용, 앱 오류·성능 정보</td></tr>
+    <tr><td>Google Play 결제</td><td>Pro 계정·도토리 구매</td>
+        <td>구매 내역(결제 정보는 Google이 처리하며 운영자는 받지 않음)</td></tr>
+    <tr><td>휴대폰 위치 서비스(Android 주소 변환, 보통 Google)</td><td>타임라인 ‘정밀 주소’ — <strong>기본은 꺼짐</strong>, 이용자가 켤 때만</td>
+        <td>사진에 기록된 위치 좌표(위도·경도)만. 사진·얼굴은 보내지 않음. 끄면 휴대폰 안의 내장 지명 데이터(동·도시 단위)만 사용</td></tr>
+  </table></div>
   <ul>
-    <li><b>사진·미디어 접근</b>: 기기의 사진을 정리하는 데 필요합니다. 거부하면 정리 기능을 쓸 수 없습니다.</li>
+    <li>Google 개인정보처리방침: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+    <li>Google 파트너 사이트의 데이터 사용 방식: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></li>
   </ul>
+  <p>사진, 동영상, 얼굴 정보는 위 서비스에도 전달되지 않습니다.
+  맞춤 광고는 휴대폰 설정 → Google → 광고에서 광고 ID를 삭제하거나 재설정해 제한할 수 있습니다.</p>
+</section>
 
-  <h2>3. 회사가 수집하는 정보</h2>
-  <p>회사는 이름, 연락처 등 이용자를 직접 알아볼 수 있는 정보를 수집하지 않습니다.</p>
-
-  <h2>4. 제3자 서비스</h2>
+<section>
+  <h2><span class="n">5.</span>앱이 요청하는 권한</h2>
   <ul>
-    <li><b>광고(Google AdMob)</b>: 광고 표시를 위해 광고 ID 등 기기 정보를 Google이 수집할 수 있습니다. 자세한 내용은 <a href="https://policies.google.com/privacy" rel="noopener">Google 개인정보처리방침</a>을 참고하세요.</li>
-    <li><b>결제(Google Play)</b>: 유료 기능 결제는 Google Play가 처리하며, 회사는 결제 수단 정보를 받지 않습니다.</li>
+    <li><strong>사진 및 동영상</strong>: 얼굴을 찾아 인물별로 정리하기 위해 필요합니다.</li>
+    <li><strong>사진 위치 정보 접근</strong>: 사진 파일에 기록된 촬영 장소를 타임라인에 표시하기 위해 사용합니다. 휴대폰의 현재 위치(GPS)는 사용하지 않습니다. 이용자가 고른 위치 기록 파일(예: Google 타임라인 내보내기)을 불러오는 경우에도 휴대폰 안에서만 처리합니다.</li>
+    <li><strong>알림</strong>: 분석 진행 상황과 완료를 알려 드립니다.</li>
+    <li><strong>인터넷</strong>: 광고, 결제, 이용자가 켠 ‘정밀 주소’에만 사용합니다.</li>
   </ul>
-  <p>위 서비스를 쓰지 않게 되면 이 항목을 고쳐 알립니다.</p>
+  <p>권한은 휴대폰 설정에서 언제든 끌 수 있으며, 끄면 관련 기능을 쓸 수 없습니다.</p>
+</section>
 
-  <h2>5. 아동의 개인정보</h2>
-  <p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 일부러 수집하지 않습니다.</p>
+<section>
+  <h2><span class="n">6.</span>보유 기간과 파기</h2>
+  <p>운영자는 보관하는 개인정보가 없습니다. 휴대폰 안의 정보는 이용자가 앱을 삭제하거나 앱 데이터를 지울 때 즉시 삭제됩니다.
+  구매 내역은 Google Play 정책에 따라 Google이 보관합니다.</p>
+</section>
 
-  <h2>6. 방침 변경</h2>
-  <p>이 방침이 바뀌면 이 페이지에 변경 내용과 시행일을 게시합니다.</p>
+<section>
+  <h2><span class="n">7.</span>이용자의 권리</h2>
+  <p>이용자는 언제든지 앱 안에서 인물·이름·분석 기록을 지우거나, 앱 데이터를 삭제할 수 있습니다.
+  Google이 처리하는 정보는 Google 계정 설정에서 확인·삭제를 요청할 수 있습니다.
+  그 밖의 문의는 아래 연락처로 보내 주시면 지체 없이 답변드리겠습니다.</p>
+</section>
 
-  <h2>7. 문의</h2>
-  <p>개인정보 관련 문의: <a href="mailto:contact@dgr1987.com">contact@dgr1987.com</a></p>
+<section>
+  <h2><span class="n">8.</span>아동의 개인정보</h2>
+  <p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 알고서 수집하지 않습니다.</p>
+</section>
 
-  <footer>DGR1987(디지알1987) · 대표 곽범 · 사업자등록번호 592-79-00524</footer>
+<section>
+  <h2><span class="n">9.</span>안전성 확보 조치</h2>
+  <p>사진·얼굴 정보를 외부로 보내지 않도록 설계했고, 앱 데이터는 Android가 앱마다 분리해 보호하는 저장 공간에 저장됩니다.</p>
+</section>
+
+<section>
+  <h2><span class="n">10.</span>개인정보 보호책임자와 문의</h2>
+  <ul>
+    <li>상호: DGR1987(디지알1987)</li>
+    <li>개인정보 보호책임자: 대표 곽범</li>
+    <li>이메일: <a href="mailto:contact@dgr1987.com">contact@dgr1987.com</a></li>
+  </ul>
+  <p>개인정보 침해에 대한 신고·상담은 개인정보침해신고센터(privacy.kisa.or.kr, 국번없이 118),
+  개인정보분쟁조정위원회(kopico.go.kr, 1833-6972)에 할 수 있습니다.</p>
+</section>
+
+<section>
+  <h2><span class="n">11.</span>방침의 변경</h2>
+  <p>이 방침이 바뀌면 이 페이지에 시행일과 함께 알립니다.</p>
+</section>
+</article>
+
+<hr>
+
+<!-- ============================ English ============================ -->
+<article id="en" lang="en">
+<header>
+  <div class="logo">ABP</div>
+  <h1>AlbumByPeople Privacy Policy</h1>
+  <div class="meta">Effective: December 1, 2026 · Operator: DGR1987</div>
+</header>
+
+<div class="summary">
+  <p><strong>Summary</strong> — AlbumByPeople (“the app”) analyzes your photos and faces <strong>entirely on your phone</strong>.
+  Photos, videos, face data and photo location data are never sent to our servers or anywhere else, and we cannot receive or see them.
+  There is no sign-up or login. The internet is used only for ads (Google AdMob), purchases (Google Play) and the optional “Precise address” feature when you turn it on.</p>
+</div>
+
+<section>
+  <h2><span class="n">1.</span>Information we collect</h2>
+  <p>We do not collect or store your personal information on any server. The app has no server operated by us.</p>
+</section>
+
+<section>
+  <h2><span class="n">2.</span>Information processed only on your phone</h2>
+  <div class="tbl"><table>
+    <tr><th>Information</th><th>Purpose</th></tr>
+    <tr><td>Photos and videos</td><td>Read to find faces, group them by person, and build albums and timelines.</td></tr>
+    <tr><td>Face regions and face feature values</td><td>Numbers created by an on-device model to group faces of the same person. Stored only inside the app.</td></tr>
+    <tr><td>Capture time and location recorded in photo files</td><td>Used to show dates and places in timelines.</td></tr>
+    <tr><td>Names you give people, settings, acorn balance</td><td>Stored so you can use the app.</td></tr>
+  </table></div>
+  <p>This information never leaves your phone and is deleted when you uninstall the app or clear its data.</p>
+</section>
+
+<section>
+  <h2><span class="n">3.</span>When you share</h2>
+  <p>If you use [Share] on a timeline, a file containing the photos you chose is created and handed to the app you pick (e.g. a messenger).
+  This transfer is your choice; we do not receive or see it.</p>
+</section>
+
+<section>
+  <h2><span class="n">4.</span>Third-party services</h2>
+  <div class="tbl"><table>
+    <tr><th>Service</th><th>Purpose</th><th>Data that may be processed</th></tr>
+    <tr><td>Google AdMob</td><td>Rewarded ads (only when you choose to watch one)</td>
+        <td>Device identifiers such as the advertising ID, approximate location from IP address, ad interactions, crash and performance data</td></tr>
+    <tr><td>Google Play Billing</td><td>Pro account and acorn purchases</td>
+        <td>Purchase history (payment details are handled by Google, not us)</td></tr>
+    <tr><td>Phone location service (Android geocoder, usually Google)</td><td>Timeline “Precise address” — <strong>off by default</strong>, only when you turn it on</td>
+        <td>Only the coordinates stored in photos (latitude/longitude); never photos or faces. When off, only built-in offline place data is used</td></tr>
+  </table></div>
+  <p>Photos, videos and face data are not shared with these services either.
+  See <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and
+  <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from partner sites</a>.
+  You can reset or delete your advertising ID in your phone settings (Google → Ads).</p>
+</section>
+
+<section>
+  <h2><span class="n">5.</span>Permissions</h2>
+  <ul>
+    <li><strong>Photos and videos</strong>: to find faces and organize them by person.</li>
+    <li><strong>Access media location</strong>: to show where photos were taken, from the location stored in the photo file. The phone’s current GPS location is not used.</li>
+    <li><strong>Notifications</strong>: to show analysis progress.</li>
+    <li><strong>Internet</strong>: for ads, purchases and the optional “Precise address” feature only.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="n">6.</span>Retention, deletion and your rights</h2>
+  <p>We keep no personal information. On-device data is deleted when you uninstall the app or clear its data, and you can delete people, names and analysis records in the app at any time.
+  Purchase records are kept by Google under Google Play policies.</p>
+</section>
+
+<section>
+  <h2><span class="n">7.</span>Children</h2>
+  <p>The app is not directed to children under 14 (or the minimum age in your country), and we do not knowingly collect children’s information.</p>
+</section>
+
+<section>
+  <h2><span class="n">8.</span>Contact and changes</h2>
+  <p>DGR1987 · Representative: Gwak Beom · Email: <a href="mailto:contact@dgr1987.com">contact@dgr1987.com</a><br>
+  If this policy changes, we will post the update on this page with a new effective date.</p>
+</section>
+</article>
+
+<footer>© 2026 DGR1987. All rights reserved.</footer>
 </main>
 </body>
 </html>
